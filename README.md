@@ -1,3 +1,3 @@
 # SFDC FullURL Apex Class
 
-Full URL parsing in Apex code
+URL parser for SF Apex. Useful utility if you need to break a URL into it's parts. 
