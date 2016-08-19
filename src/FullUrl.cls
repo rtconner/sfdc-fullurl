@@ -65,7 +65,7 @@ public with sharing class FullUrl
 
 	public String segment(Integer index)
 	{
-		return this.returnSegments().get(index);
+		return this.segments().get(index);
 	}
 
 	public Map<String, String> params()
@@ -112,11 +112,11 @@ public with sharing class FullUrl
 	{
 		this.params = new Map<String, String>();
 
-		if(this.returnQuery() == null) {
+		if(this.query() == null) {
 			return;
 		}
 
-		for(String pair : this.returnQuery().split('&')) {
+		for(String pair : this.query().split('&')) {
 			integer idx = pair.indexOf('=');
 			String key = EncodingUtil.urlDecode(pair.substring(0, idx), 'UTF-8');
 			String val = EncodingUtil.urlDecode(pair.substring(idx + 1), 'UTF-8');
